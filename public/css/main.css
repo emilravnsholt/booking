@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap);
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  min-height: 1px;
+  min-width: 1px;
+}
+
+input, textarea, select {
+  outline: none;
+  border-color: #d7d7d7;
+  resize: none;
+  padding: 0 10px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+input[type=text],
+input[type=password],
+input[type=url],
+input[type=tel],
+input[type=search],
+input[type=number],
+input[type=datetime],
+input[type=email] {
+  box-sizing: border-box;
+  border-radius: 0;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1;
+  outline: none;
+  border-color: #d7d7d7;
+  resize: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+input[type=text]:focus,
+input[type=text] ._keyfocus *:focus,
+input[type=text] input:not([disabled]):focus,
+input[type=text] textarea:not([disabled]):focus,
+input[type=text] select:not([disabled]):focus,
+input[type=password]:focus,
+input[type=password] ._keyfocus *:focus,
+input[type=password] input:not([disabled]):focus,
+input[type=password] textarea:not([disabled]):focus,
+input[type=password] select:not([disabled]):focus,
+input[type=url]:focus,
+input[type=url] ._keyfocus *:focus,
+input[type=url] input:not([disabled]):focus,
+input[type=url] textarea:not([disabled]):focus,
+input[type=url] select:not([disabled]):focus,
+input[type=tel]:focus,
+input[type=tel] ._keyfocus *:focus,
+input[type=tel] input:not([disabled]):focus,
+input[type=tel] textarea:not([disabled]):focus,
+input[type=tel] select:not([disabled]):focus,
+input[type=search]:focus,
+input[type=search] ._keyfocus *:focus,
+input[type=search] input:not([disabled]):focus,
+input[type=search] textarea:not([disabled]):focus,
+input[type=search] select:not([disabled]):focus,
+input[type=number]:focus,
+input[type=number] ._keyfocus *:focus,
+input[type=number] input:not([disabled]):focus,
+input[type=number] textarea:not([disabled]):focus,
+input[type=number] select:not([disabled]):focus,
+input[type=datetime]:focus,
+input[type=datetime] ._keyfocus *:focus,
+input[type=datetime] input:not([disabled]):focus,
+input[type=datetime] textarea:not([disabled]):focus,
+input[type=datetime] select:not([disabled]):focus,
+input[type=email]:focus,
+input[type=email] ._keyfocus *:focus,
+input[type=email] input:not([disabled]):focus,
+input[type=email] textarea:not([disabled]):focus,
+input[type=email] select:not([disabled]):focus {
+  outline: none;
+  box-shadow: none;
+}
+
+textarea {
+  padding: 8px 16px;
+}
+
+figure {
+  margin: 0;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: silver;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: silver;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: silver;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: silver;
+}
+
+.btn {
+  -webkit-text-size-adjust: 100%;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+  padding: 20px 32px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #eebbc3;
+  color: #232946;
+  transition: 400ms;
+}
+.btn:hover {
+  background: rgba(238, 187, 195, 0.75);
+}
+
+#main {
+  background: #232946;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+#main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 41, 70, 0.5);
+}
+#main p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+#topsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#topsection .scroll-container {
+  width: 30px;
+  height: 60px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 10;
+  bottom: 48px;
+  left: calc(50% - 15px);
+}
+#topsection .scroller {
+  width: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 34px;
+  z-index: 10;
+  -webkit-animation: scroller 1500ms ease-out infinite;
+          animation: scroller 1500ms ease-out infinite;
+}
+@-webkit-keyframes scroller {
+  0% {
+    bottom: 34px;
+  }
+  5% {
+    top: 4px;
+  }
+  32% {
+    bottom: 4px;
+  }
+  66% {
+    top: 34px;
+    bottom: 4px;
+  }
+  100% {
+    top: 4px;
+    bottom: 34px;
+  }
+}
+@keyframes scroller {
+  0% {
+    bottom: 34px;
+  }
+  5% {
+    top: 4px;
+  }
+  32% {
+    bottom: 4px;
+  }
+  66% {
+    top: 34px;
+    bottom: 4px;
+  }
+  100% {
+    top: 4px;
+    bottom: 34px;
+  }
+}
+
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+}
+#topbar p {
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin-bottom: 72px;
+}

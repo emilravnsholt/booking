@@ -1,0 +1,33 @@
+// Colors
+$color-bg: #232946;
+$color-headline: #fffffe;
+$color-paragraph: #b8c1ec;
+$color-button: #eebbc3;
+$color-button-hover: rgba($color-button, 0.75);
+$color-button-text: #232946;
+
+// Fonts
+$font-1: 'Ubuntu', sans-serif;
+
+// Margins
+$margin-1: 8px;
+$margin-2: 16px;
+$margin-3: 24px;
+$margin-4: 48px;
+$margin-5: 72px;
+$margin-6: 100px;
+
+// Border radius
+$border-radius-1: 4px;
+$border-radius-2: $margin-1;
+$border-radius-3: $margin-2;
+
+// Box shadows
+$box-shadow-1: 0 6px 16px 0 rgb(0 0 0 / 6%);
+$box-shadow-2: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12), 0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07);
+
+// Other
+$transition: 400ms;
+
+// Breakpoints
+$break1: 1450px;
