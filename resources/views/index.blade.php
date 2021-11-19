@@ -41,11 +41,20 @@
         </div>
         <div class="column">
             <h2 class="title"><span>2.</span>Pick a meal</h2>
+            <table id="meals">
+                <tbody></tbody>
+            </table>
         </div>
         <div class="column">
             <h2 class="title"><span>3.</span>Choose your poison</h2>
+            <table id="drinks">
+                <tbody></tbody>
+            </table>
         </div>
         <div class="row">
+            <div id="app">
+
+            </div>
             <div class="btn">Book now</div>
         </div>
     </section>

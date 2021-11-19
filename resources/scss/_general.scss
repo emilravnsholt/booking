@@ -46,6 +46,9 @@ h1, h2, h3, h4, h5, h6{
         color: #fff;
         color: $color-paragraph;
     }
+    table, input, textarea, select, option, a{
+        font-family: $font-1
+    }
 }
 
 #topsection{
@@ -155,6 +158,9 @@ h1, h2, h3, h4, h5, h6{
     padding: $margin-6;
     @include flexing(row, flex-start, space-between);
     flex-wrap: wrap;
+    @media only screen and (max-width: $break1){
+        padding: $margin-6 $margin-3;
+    }
 
     .column{
         width: 33.333%;
@@ -164,11 +170,15 @@ h1, h2, h3, h4, h5, h6{
     .row{
         width: 100%;
         height: 12%;
-        @include flexing(column, center, center);
+        @include flexing(row, center, flex-end);
+        padding: 0 $margin-4;
     }
     .title{
         color: $color-paragraph;
         margin-bottom: $margin-6;
+        width: 100%;
+        text-align: left;
+        font-size: 32px;
         span{
             margin-right: 10px;
             opacity: 0.5;
@@ -183,5 +193,65 @@ h1, h2, h3, h4, h5, h6{
     input, textarea, select{
         width: 100%;
         padding: $margin-1 $margin-2;
+    }
+    table{
+        width: 100%;
+        background: #fff;
+        height: 70%;
+        @include flexing(column, flex-start, flex-start);
+        border-radius: $border-radius-1;
+        overflow: auto;
+        tbody, tr{
+            width: 100%;
+            display: inline-block;
+        }
+        tbody{
+            height: 100%;
+        }
+        tr{
+            @include flexing(row, center, flex-start);
+            border-bottom: 1px solid $color-bg;
+            width: 100%;
+            td{
+                flex-grow: 1;
+                padding: 8px 16px;
+                &:nth-of-type(1){
+                    width: 40%;
+                }
+                &:nth-of-type(2){
+                    width: 20%;
+                }
+                &:nth-of-type(3){
+                    width: 40%;
+                }
+            }
+        }
+        .qty{
+            width: auto;
+            @include flexing(row, center, flex-end);
+            input{
+                width: 40px;
+                height: 40px;
+                border: none;
+                outline: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                @include flexing(row, center, center);
+            }
+            .up, .down{
+                width: 40px;
+                height: 40px;
+                background: $color-button;
+                transition: $transition;
+                cursor: pointer;
+                border-radius: $border-radius-1;
+                @include flexing(row, center, center);
+
+                &:hover{
+                    background: $color-button-hover;
+                }
+            }
+        }
     }
 }

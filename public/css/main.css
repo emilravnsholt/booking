@@ -183,6 +183,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   color: #b8c1ec;
 }
+#main table, #main input, #main textarea, #main select, #main option, #main a {
+  font-family: "Ubuntu", sans-serif;
+}
 
 #topsection {
   display: flex;
@@ -319,6 +322,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 1450px) {
+  #booking {
+    padding: 100px 24px;
+  }
+}
 #booking .column {
   width: 33.333%;
   height: 88%;
@@ -329,12 +337,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 12%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 0 48px;
 }
 #booking .title {
   color: #b8c1ec;
   margin-bottom: 100px;
+  width: 100%;
+  text-align: left;
+  font-size: 32px;
 }
 #booking .title span {
   margin-right: 10px;
@@ -349,4 +361,78 @@ h1, h2, h3, h4, h5, h6 {
 #booking input, #booking textarea, #booking select {
   width: 100%;
   padding: 8px 16px;
+}
+#booking table {
+  width: 100%;
+  background: #fff;
+  height: 70%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: auto;
+}
+#booking table tbody, #booking table tr {
+  width: 100%;
+  display: inline-block;
+}
+#booking table tbody {
+  height: 100%;
+}
+#booking table tr {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  border-bottom: 1px solid #232946;
+  width: 100%;
+}
+#booking table tr td {
+  flex-grow: 1;
+  padding: 8px 16px;
+}
+#booking table tr td:nth-of-type(1) {
+  width: 40%;
+}
+#booking table tr td:nth-of-type(2) {
+  width: 20%;
+}
+#booking table tr td:nth-of-type(3) {
+  width: 40%;
+}
+#booking table .qty {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+#booking table .qty input {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#booking table .qty .up, #booking table .qty .down {
+  width: 40px;
+  height: 40px;
+  background: #eebbc3;
+  transition: 400ms;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#booking table .qty .up:hover, #booking table .qty .down:hover {
+  background: rgba(238, 187, 195, 0.75);
 }

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoutesController;
+use App\Http\Controllers\TemplatesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [RoutesController::class, 'index'])->name('index');
+Route::get('/templates/meal', [TemplatesController::class, 'meal'])->name('template.meal');
+Route::get('/templates/drink', [TemplatesController::class, 'drink'])->name('template.drink');
