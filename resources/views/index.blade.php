@@ -14,6 +14,39 @@
     </section>
 
     <section id="booking">
-        
+        <div class="column">
+            <h2 class="title"><span>1.</span>Book a table</h2>
+
+            <div class="form-group">
+                <p class="subtitle">Which day are you visiting?</p>
+                <div class="datepicker">
+                    <input type="date">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="subtitle">When do you want to eat?</p>
+                <select name="" id="">
+                    <option value="">Pick a time</option>
+                    <option value="">16:00 - 18:00</option>
+                    <option value="">18:00 - 20:00</option>
+                    <option value="">20:00 - 22:00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p class="subtitle">How many people?</p>
+                <input type="number" step="1" value="2" min="2" max="10">
+            </div>
+        </div>
+        <div class="column">
+            <h2 class="title"><span>2.</span>Pick a meal</h2>
+        </div>
+        <div class="column">
+            <h2 class="title"><span>3.</span>Choose your poison</h2>
+        </div>
+        <div class="row">
+            <div class="btn">Book now</div>
+        </div>
     </section>
 @endsection
