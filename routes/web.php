@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutesController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TemplatesController;
 
 /*
@@ -15,6 +16,12 @@ use App\Http\Controllers\TemplatesController;
 |
 */
 
+// Frontend routes
 Route::get('/', [RoutesController::class, 'index'])->name('index');
+
+// Templates
 Route::get('/templates/meal', [TemplatesController::class, 'meal'])->name('template.meal');
 Route::get('/templates/drink', [TemplatesController::class, 'drink'])->name('template.drink');
+
+// Bookings
+Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');

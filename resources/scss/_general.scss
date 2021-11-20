@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6{
         color: #fff;
         color: $color-paragraph;
     }
-    table, input, textarea, select, option, a{
+    table, input, textarea, select, option, a, small{
         font-family: $font-1
     }
 }
@@ -136,6 +136,16 @@ h1, h2, h3, h4, h5, h6{
         display: inline-block;
         letter-spacing: 2px;
         transition: $transition;
+        &:first-of-type{
+            @media only screen and (max-width: $break1){
+                display: none;
+            }
+        }
+        &:last-of-type{
+            @media only screen and (max-width: $break1){
+                display: none;
+            }
+        }
     }
 }
 
@@ -148,6 +158,12 @@ h1, h2, h3, h4, h5, h6{
 
 .logo{
     margin-bottom: $margin-5;
+    @media only screen and (max-width: $break1){
+        width: 400px;
+    }
+    @media only screen and (max-width: $break3){
+        width: 280px;
+    }
 }
 
 #booking{
@@ -156,29 +172,57 @@ h1, h2, h3, h4, h5, h6{
     height: 100vh;
     height: calc((var(--vh, 1vh) * 100));
     padding: $margin-6;
-    @include flexing(row, flex-start, space-between);
-    flex-wrap: wrap;
     @media only screen and (max-width: $break1){
         padding: $margin-6 $margin-3;
     }
+    @media only screen and (max-width: $break2){
+        height: auto;
+    }
 
+    #booking_form{
+        width: 100%;
+        height: 100%;
+        @include flexing(row, flex-start, space-between);
+        flex-wrap: wrap;
+        @media only screen and (max-width: $break2){
+            height: auto;
+        }
+    }
     .column{
         width: 33.333%;
         height: 88%;
         padding: 0 $margin-4;
+        @media only screen and (max-width: $break2){
+            width: 100%;
+            height: auto;
+            margin-bottom: $margin-5;
+        }
+        @media only screen and (max-width: $break3){
+            padding: 0;
+        }
     }
     .row{
         width: 100%;
         height: 12%;
         @include flexing(row, center, flex-end);
-        padding: 0 $margin-4;
+        padding: $margin-2 $margin-4 0 $margin-4;
+        @media only screen and (max-width: $break2){
+            margin-top: $margin-3;
+            height: auto;
+        }
+        @media only screen and (max-width: $break3){
+            padding: 0;
+        }
     }
     .title{
         color: $color-paragraph;
-        margin-bottom: $margin-6;
+        margin-bottom: $margin-5;
         width: 100%;
         text-align: left;
         font-size: 32px;
+        @media only screen and (max-width: $break1){
+            font-size: 20px;
+        }
         span{
             margin-right: 10px;
             opacity: 0.5;
@@ -188,11 +232,20 @@ h1, h2, h3, h4, h5, h6{
         margin-bottom: $margin-2;
     }
     .form-group{
-        padding: $margin-3 0;
+        margin-bottom: $margin-3;
+        position: relative;
+        small{
+            position: absolute;
+            left: 0;
+            top: calc(100% + 4px);
+            color: red;
+        }
     }
     input, textarea, select{
         width: 100%;
-        padding: $margin-1 $margin-2;
+        padding: $margin-2 $margin-3;
+        border: none;
+        border-radius: $border-radius-1;
     }
     table{
         width: 100%;
@@ -201,6 +254,9 @@ h1, h2, h3, h4, h5, h6{
         @include flexing(column, flex-start, flex-start);
         border-radius: $border-radius-1;
         overflow: auto;
+        @media only screen and (max-width: $break1){
+            font-size: 14px;
+        }
         tbody, tr{
             width: 100%;
             display: inline-block;
